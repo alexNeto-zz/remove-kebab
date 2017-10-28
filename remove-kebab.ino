@@ -46,33 +46,7 @@ int tune4[] = {
 0, p, 0, p, 0, p, 0, p, 2, p, 2, p, 4, p,
 };
 */
-
-float duration[] = {EIGHTH,
-                    QUARTER + EIGHTH,
-                    SIXTEENTH,
-                    QUARTER,
-                    QUARTER,
-                    HALF,
-                    HALF,
-                    HALF,
-                    QUARTER,
-                    QUARTER,
-                    HALF + QUARTER,
-                    QUARTER,
-                    QUARTER,
-                    QUARTER,
-                    QUARTER + EIGHTH,
-                    EIGHTH,
-                    QUARTER,
-                    QUARTER,
-                    QUARTER,
-                    EIGHTH,
-                    EIGHTH,
-                    QUARTER,
-                    QUARTER,
-                    QUARTER,
-                    QUARTER,
-                    HALF + QUARTER};
+int time = 150;
 
 int length;
 int length1;
@@ -87,26 +61,22 @@ void setup() {
 void loop() {
   for (int x = 0; x < length1; x++) {
     tone(8, tune1[x]);
-    delay(1500 * SIXTEENTH);
+    delay(time);
     noTone(8);
-    delay(150 * SIXTEENTH);
   }
   for (int x = 0; x < length2; x++) {
     tone(8, tune2[x]);
-    delay(1500 * SIXTEENTH);
+    delay(time);
     noTone(8);
-    delay(150 * SIXTEENTH);
   }
   for (int x = 0; x < length1; x++) {
     tone(8, tune1[x]);
-    delay(150 * SIXTEENTH);
+    delay(time);
     noTone(8);
-    delay(150 * SIXTEENTH);
   }
   for (int x = 0; x < length3; x++) {
     tone(8, tune3[x]);
-    delay(1500 * SIXTEENTH);
+    delay(time);
     noTone(8);
-    delay(150 * SIXTEENTH);
   }
 }
